@@ -2,6 +2,7 @@
   "name": "regula_test",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
@@ -10,7 +11,6 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.0",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
     "prettier": "3.6.2"

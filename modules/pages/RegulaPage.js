@@ -11,7 +11,7 @@ export class RegulaPage extends BasePage {
 
     get header() {
         return {
-            logo: this.page.locator('svg[class*="LinkIcon"]'),
+            logo: this.page.getByTestId('header-logo-link'),
             navigation: {
                 faceSDKDropdown: this.page.getByTestId('navigation'),
                 devHubButton: this.page.getByTestId('navigation-link-developer-hub'),
@@ -23,6 +23,7 @@ export class RegulaPage extends BasePage {
     }
 
     async openStartPage() {
-        await this.page.goto(baseUrl);
+        await this.page.goto('');
+        await this.header.logo.click();
     }
 }
