@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "health": "npx playwright test health"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
