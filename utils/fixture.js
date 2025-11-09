@@ -1,18 +1,15 @@
 import { test as base } from '@playwright/test';
 import { PageFactory } from '../modules/PageFactory.js';
+import { TabFactory } from '../modules/TabFactory.js';
 
 
 export const test = base.extend({
-  pages: async ({ browser }, use) => {
-    // Создаём контекст с применением storageState
-    const context = await browser.newContext({
-      storageState: './storageState.json'
-    });
-
-    const page = await context.newPage();
+  pages: async ({ page }, use) => {
     const pages = new PageFactory(page);
     await use(pages);
-
-    await context.close();
+  },
+  tabs: async({ page }, use) => {
+    const tabs = new TabFactory(page);
+    await use(tabs);
   }
 });

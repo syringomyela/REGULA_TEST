@@ -1,3 +1,4 @@
+import { expect } from '@playwright/test';
 
 export class BasePage {
     page;
@@ -32,5 +33,23 @@ export class BasePage {
     async openStartPage() {
         await this.page.goto('');
         expect(this.page.url()).toBe(process.env.URL);
+    }
+    tabs = {
+        livenessTab: 'Liveness detection',
+        detectionTab: 'Face detection',
+        matchingTab: 'Face matching',
+        qualityTab: 'Face image quality',
+    }
+
+    async openTab(tabName) {
+        const allowedValues = Object.keys(this.tabs);
+
+        if (!allowedValues.includes(tabName)) {
+            throw new Error(
+                `Invalid tab refference "${tabName}". tab names: ${allowedValues.join(', ')}`
+            );
+        }
+
+        await this.tab.getByText(this.tabs[tabName]).click();
     }
 }
