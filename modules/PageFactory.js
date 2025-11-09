@@ -1,4 +1,4 @@
-import { RegulaPage } from "./pages/RegulaPage";
+import { RegulaPage } from "./pages/RegulaPage.js";
 
 export class PageFactory {
     constructor(page) {

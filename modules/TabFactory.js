@@ -1,7 +1,7 @@
-import { FaceMatchingTab } from "./tabs/FaceMatchingTab"; 
-import { FaceDetectionTab } from "./tabs/FaceDetectionTab";
-import { ImageQualityTab } from "./tabs/imageQualityTab";
-import { LivenessTab } from "./tabs/LivenessTab";
+import { FaceMatchingTab } from "./tabs/FaceMatchingTab.js"; 
+import { FaceDetectionTab } from "./tabs/FaceDetectionTab.js";
+import { ImageQualityTab } from "./tabs/ImageQualityTab.js";
+import { LivenessTab } from "./tabs/LivenessTab.js";
 
 export class TabFactory {
     constructor(page) {

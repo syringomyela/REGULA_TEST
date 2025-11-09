@@ -2,7 +2,6 @@ import { defineConfig } from 'eslint/config';
 import * as js from '@eslint/js';
 import * as globals from 'globals';
 import tseslint from 'typescript-eslint';
-import prettierPlugin from 'eslint-plugin-prettier';
 
 export default defineConfig([
   {
