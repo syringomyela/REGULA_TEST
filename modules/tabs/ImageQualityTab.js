@@ -1,4 +1,4 @@
-import { BaseTab } from "./BaseTab";
+import { BaseTab } from "./BaseTab.js";
 
 export class ImageQualityTab extends BaseTab {
     constructor(page) {

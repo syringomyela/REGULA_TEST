@@ -1,4 +1,4 @@
-import { BaseTab } from "./BaseTab";
+import { BaseTab } from "./BaseTab.js";
 
 export class LivenessTab extends BaseTab {
     constructor(page) {
