@@ -1,5 +1,5 @@
-import { test } from '../fixture/fixture'
+import { test } from '../utils/fixture'
 
 test('Health check', async ({ pages }) => {
-    await pages
+    await pages.regulaPage.openStartPage();
 })
