@@ -1,5 +1,4 @@
 import { BaseTab } from "./BaseTab";
-import { expect } from '@playwright/test';
 
 export class ImageQualityTab extends BaseTab {
     constructor(page) {
@@ -10,9 +9,5 @@ export class ImageQualityTab extends BaseTab {
         return {
             window: this.page.locator('//div[contains(@class, "ImageQuality_quality")]')
         }
-    }
-
-    async assertTabContentPresence() {
-        await expect(this.elements.window).toBeVisible();
     }
 }
