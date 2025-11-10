@@ -51,5 +51,6 @@ export class BasePage {
         }
 
         await this.tab.getByText(this.tabs[tabName]).click();
+        await this.page.waitForLoadState('networkidle');
     }
 }
