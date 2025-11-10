@@ -5,6 +5,4 @@ export class RegulaPage extends BasePage {
     constructor(page) {
         super(page)
     }
-
-
 }
